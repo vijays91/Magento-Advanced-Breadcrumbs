@@ -1,4 +1,4 @@
-# Magento-Advanced-Breadcrumbs
+# Magento Advanced Breadcrumbs
 Display the full path in product breadcrumbs and add the breadcrumbs to customer and contact us account pages.
 
 1. Display the full path in product breadcrumbs (show all category paths).
