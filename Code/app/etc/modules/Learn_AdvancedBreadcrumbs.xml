@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Learn_AdvancedBreadcrumbs>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Learn_AdvancedBreadcrumbs>
+    </modules>
+</config>

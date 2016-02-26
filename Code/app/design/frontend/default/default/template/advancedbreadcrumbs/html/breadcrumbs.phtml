@@ -1,0 +1,86 @@
+<?php
+
+    if($crumbs && is_array($crumbs)):
+    
+        /*- Prev Page URL -*/
+        $last_url = $_SERVER['HTTP_REFERER'];  
+        $helper	= Mage::helper('advancedbreadcrumbs');
+        
+        if (
+            /* $helper->adv_breadcrumbs_enable() && */
+            $helper->adv_breadcrumbs_search_enable() &&
+            strpos($last_url, 'catalogsearch') !== false && 
+            Mage::registry('current_product') && 
+            strpos($last_url, 'q=') !== false
+        ) {
+            $base_url = basename($last_url);
+            $search = explode("&", $base_url);
+            foreach($search as $value) {
+                if(strpos($value, 'q=')!== false) {
+                    $search_text = trim(trim(trim($value), "?"), "q=");
+                }
+            }
+        ?>
+            <div class="breadcrumbs">
+                <ul>
+                    <li>
+                        <?php echo $this->__("Home");?> &nbsp; / &nbsp;
+                    </li>
+                    <li>
+                        <a href="<?php echo $last_url; ?>">
+                            <?php echo $this->__("Search results for : '%s'", urldecode($search_text));?>
+                        </a>
+                        &nbsp; / &nbsp;
+                    </li>
+                    <li><?php echo $this->escapeHtml(Mage::registry('current_product')->getName()); ?></li>
+                </ul>
+            </div>
+
+        <?php
+        } else if (
+                /* $helper->adv_breadcrumbs_enable() && */
+                ( $helper->adv_breadcrumbs_single_category_enable() || $helper->adv_breadcrumbs_multi_category_enable() ) &&
+                Mage::registry('current_product')
+            )
+            {
+                $_product = Mage::registry('current_product');
+                $cats = $_product->getCategoryIds();
+                foreach ($cats as $catId):
+        ?>        
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><?php echo $this->__("Home");?> &nbsp; / &nbsp; </li>
+                        <?php                    
+                            $parentPath = Mage::getResourceModel('catalog/category')->getAttributeRawValue($catId, 'path');
+                            $parentPath = explode('/', $parentPath);
+                            $parentPath = array_splice($parentPath, 2);
+                            foreach ($parentPath as $parentId):
+                        ?>
+                            <li><?php echo $this->escapeHtml(Mage::getResourceModel('catalog/category')->getAttributeRawValue($parentId, 'name')) ?> &nbsp; / &nbsp; </li>
+                        <?php endforeach; ?>
+                        <li><?php echo $_product->getName() ?></li>
+                    </ul>
+                </div>
+                <?php  if($helper->adv_breadcrumbs_single_category_enable()) { break; } /*- Only Sigle category -*/?>
+            <?php endforeach; ?>
+    <?php } else { ?>
+        <div class="breadcrumbs">
+            <ul>
+                <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+                    <li class="<?php echo $_crumbName ?>">
+                    <?php if($_crumbInfo['link']): ?>
+                        <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><?php echo $this->escapeHtml($_crumbInfo['label']) ?></a>
+                    <?php elseif($_crumbInfo['last']): ?>
+                        <strong><?php echo $this->escapeHtml($_crumbInfo['label']) ?></strong>
+                    <?php else: ?>
+                        <?php echo $this->escapeHtml($_crumbInfo['label']) ?>
+                    <?php endif; ?>
+                    <?php if(!$_crumbInfo['last']): ?>
+                        <span>/ </span>
+                    <?php endif; ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php } ?>
+<?php endif; ?>

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <myconf_advancedbreadcrumbs translate="label" module="advancedbreadcrumbs">
+            <label>Advanced Breadcrumbs</label>
+            <sort_order>2</sort_order>
+        </myconf_advancedbreadcrumbs>
+    </tabs>
+    
+	<sections>
+        <advancedbreadcrumbs_tab translate="label" module="advancedbreadcrumbs">
+            <label>Advanced Breadcrumbs</label>
+            <tab>myconf_advancedbreadcrumbs</tab>
+            <sort_order>350</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+				<advancedbreadcrumbs_setting translate="label comment">
+                    <label>Advanced Breadcrumbs Configuration</label>
+                    <sort_order>555</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <!-- 
+						<advancedbreadcrumbs_enable translate="label comment">
+                            <label>Enable</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <validate>required-entry</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[ Enable / Disable the Advanced Breadcrumbs Configuration. <br /> <br /><hr style="background:gold none repeat scroll 0 0;padding:1px;" />]]>
+                            </comment>
+                        </advancedbreadcrumbs_enable>
+                        -->
+                        
+                        <!-- Single Category Breadcrumbs -->
+						<advancedbreadcrumbs_single_enable translate="label comment">
+                            <label>Show the Single Category Breadcrumbs</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <validate>required-entry</validate>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[ Enable / Disable the Single Category Breadcrumbs. <br /> <br /><hr style="background:green  none repeat scroll 0 0;padding:1px;" />]]>
+                            </comment>
+                            <depends>
+                                <!-- <advancedbreadcrumbs_enable>1</advancedbreadcrumbs_enable> -->
+                                <advancedbreadcrumbs_multiple_enable>0</advancedbreadcrumbs_multiple_enable>
+                            </depends>
+                        </advancedbreadcrumbs_single_enable>
+                        
+                        <!-- Multiple Category Breadcrumbs -->
+						<advancedbreadcrumbs_multiple_enable translate="label comment">
+                            <label>Show the Multiple Category Breadcrumbs</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <validate>required-entry</validate>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[ Enable / Disable the Multiple Category Breadcrumbs. <br /> <br /><hr style="background:red none repeat scroll 0 0;padding:1px;" />]]>
+                            </comment>
+                            <depends>
+                                <!-- <advancedbreadcrumbs_enable>1</advancedbreadcrumbs_enable> -->
+                                <advancedbreadcrumbs_single_enable>0</advancedbreadcrumbs_single_enable>
+                            </depends>
+                        </advancedbreadcrumbs_multiple_enable>
+                        
+                        <!-- Search Page Breadcrumbs -->
+						<advancedbreadcrumbs_search_enable translate="label comment">
+                            <label>Show the Search Page Breadcrumbs</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <validate>required-entry</validate>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[ Enable / Disable the Search Page Breadcrumbs. <br /> <br /><hr style="background:orange none repeat scroll 0 0;padding:1px;" />]]>
+                            </comment>
+                            <!--                             
+                            <depends>
+                                <advancedbreadcrumbs_enable>1</advancedbreadcrumbs_enable>
+                            </depends>
+                            -->
+                        </advancedbreadcrumbs_search_enable>
+                        
+                        <!-- Customer Breadcrumbs -->
+						<advancedbreadcrumbs_customer_enable translate="label comment">
+                            <label>Show the Customer Breadcrumbs</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <validate>required-entry</validate>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[ Enable / Disable the Customer Breadcrumbs. <br /> <br /> <hr style="background:gray none repeat scroll 0 0;padding:1px;" />]]>
+                            </comment>
+                            <!--                             
+                            <depends>
+                                <advancedbreadcrumbs_enable>1</advancedbreadcrumbs_enable>
+                            </depends>
+                            -->
+                        </advancedbreadcrumbs_customer_enable>
+                        
+                        <!-- Contact Us Breadcrumbs -->
+						<advancedbreadcrumbs_contactus_enable translate="label comment">
+                            <label>Show the Contact Us Breadcrumbs</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <validate>required-entry</validate>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[ Enable / Disable the Contact Us Breadcrumbs. <br /> <br /> <hr style="background:firebrick none repeat scroll 0 0;padding:1px;" />]]>
+                            </comment>
+                            <!-- 
+                            <depends>
+                                <advancedbreadcrumbs_enable>1</advancedbreadcrumbs_enable>
+                            </depends>
+                            -->
+                        </advancedbreadcrumbs_contactus_enable>                        
+					</fields>	
+				</advancedbreadcrumbs_setting>
+            </groups>
+        </advancedbreadcrumbs_tab>  
+    </sections>
+</config>

@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <!-- HOME/ MY ACCOUNT/ DASHBOARD -->
+    <customer_account_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Dashboard</crumbname>
+                <crumbinfo>
+                    <label>Dashboard</label>
+                    <title>Dashboard</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </customer_account_index>
+    
+    <!-- HOME/ MY ACCOUNT/ ADDRESS BOOK -->
+    <customer_address_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Address Book</crumbname>
+                <crumbinfo>
+                    <label>Address Book</label>
+                    <title>Address Book</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </customer_address_index>
+    
+    <!-- HOME/ MY ACCOUNT/ ADDRESS BOOK/ EDIT ADDRESS -->
+    <customer_address_form translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Address Book</crumbname>
+                <crumbinfo>
+                    <label>Address Book</label>
+                    <title>Address Book</title>
+                    <link>customer/address/</link>
+                </crumbinfo>
+            </action>            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Edit Address</crumbname>
+                <crumbinfo>
+                    <label>Edit Address</label>
+                    <title>Edit Address</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </customer_address_form>
+
+    <!-- HOME/ MY ACCOUNT/ ACCOUNT INFORMATION -->
+    <customer_account_edit translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Account Information</crumbname>
+                <crumbinfo>
+                    <label>Account Information</label>
+                    <title>Account Information</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </customer_account_edit>
+    
+    <!-- HOME/ MY ACCOUNT/ MY PRODUCT REVIEWS -->
+    <review_customer_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>My Product Reviews</crumbname>
+                <crumbinfo>
+                    <label>My Product Reviews</label>
+                    <title>My Product Reviews</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </review_customer_index>
+    
+    <!--
+    <tag_customer_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig = "advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb"  ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+            <crumbname>My Tags</crumbname>
+                <crumbinfo>
+                    <label>My Tags</label>
+                    <title>My Tags</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </tag_customer_index>
+    -->
+    
+    <!-- HOME/ MY ACCOUNT/ MY DOWNLOADABLE PRODUCTS -->
+    <downloadable_customer_products translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Downloadable Products</crumbname>
+                <crumbinfo>
+                    <label>Downloadable Products</label>
+                    <title>Downloadable Products</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </downloadable_customer_products>
+    
+    <!-- HOME/ MY ACCOUNT/ WISHLIST -->
+    <wishlist_index_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>My Wishlist</crumbname>
+                <crumbinfo>
+                    <label>My Wishlist</label>
+                    <title>My Wishlist</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </wishlist_index_index>
+    
+    <!-- HOME/ MY ACCOUNT/ NEWSLETTER SUBSCRIPTIONS -->
+    <newsletter_manage_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Newsletter Manage</crumbname>
+                <crumbinfo>
+                    <label>Newsletter Manage</label>
+                    <title>Newsletter Manage</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </newsletter_manage_index>
+    
+    <!-- HOME/ MY ACCOUNT/ MY ORDERS -->
+    <sales_order_history translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>My Orders</crumbname>
+                <crumbinfo>
+                    <label>My Orders</label>
+                    <title>My Orders</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </sales_order_history>
+    
+    <!-- HOME / MY ACCOUNT / MY ORDERS / ORDER #100000006 -->
+    <sales_order_view translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>My Orders</crumbname>
+                <crumbinfo>
+                    <label>My Orders</label>
+                    <title>My Orders</title>
+                    <link>sales/order/history/</link>
+                </crumbinfo>
+            </action>
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Order View</crumbname>
+                <params helper="advancedbreadcrumbs/order_view" />
+                <!--
+                <crumbinfo>
+                    <label>Order View</label>
+                    <title>Order View</title>
+                </crumbinfo>
+                -->
+            </action>
+        </reference>
+    </sales_order_view>
+
+    <!-- HOME/ MY ACCOUNT/ RECURRING PROFILES -->
+    <sales_recurring_profile_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb"  translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Recurring Profiles</crumbname>
+                <crumbinfo>
+                    <label>Recurring Profiles</label>
+                    <title>Recurring Profiles</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </sales_recurring_profile_index>
+   
+    <!-- HOME/ MY ACCOUNT/ BILLING AGREEMENTS -->
+    <sales_billing_agreement_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Billing Agreements</crumbname>
+                <crumbinfo>
+                    <label>Billing Agreements</label>
+                    <title>Billing Agreements</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </sales_billing_agreement_index>
+    
+    <!-- HOME/ MY ACCOUNT/ APPLICATIONS -->
+    <oauth_customer_token_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbName>My Account</crumbName>
+                <params helper="advancedbreadcrumbs/getMyAccountUrl" />
+            </action>
+            
+            <action method="addCrumb" translate="crumbInfo.label crumbInfo.title" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_customer_enable">
+                <crumbname>Applications</crumbname>
+                <crumbinfo>
+                    <label>Applications</label>
+                    <title>Applications</title>
+                </crumbinfo>
+            </action>
+        </reference>
+    </oauth_customer_token_index>
+    
+    
+    <!-- Contact Us Page -->
+    <contacts_index_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_contactus_enable">
+                <crumbName>Home</crumbName>
+                <params helper="advancedbreadcrumbs/getHomeUrl" />
+            </action>
+            
+            <action method="addCrumb" ifconfig="advancedbreadcrumbs_tab/advancedbreadcrumbs_setting/advancedbreadcrumbs_contactus_enable">
+                <crumbName>Contact Us</crumbName>
+                <params helper="advancedbreadcrumbs/getContactsUrl" />
+            </action>
+        </reference>
+    </contacts_index_index>
+</layout>

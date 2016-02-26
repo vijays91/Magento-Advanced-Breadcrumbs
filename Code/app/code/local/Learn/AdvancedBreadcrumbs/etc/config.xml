@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Learn_AdvancedBreadcrumbs>
+            <version>1.0.0</version>
+        </Learn_AdvancedBreadcrumbs>
+    </modules>
+    
+    <frontend>
+        <layout>
+            <updates>
+                <advancedbreadcrumbs>
+                    <file>learn/advancedbreadcrumbs.xml</file>
+                </advancedbreadcrumbs>
+            </updates>
+        </layout>
+    </frontend>
+    
+    <global>
+        <blocks>
+            <!-- Rewrite Breadcrumbs -->
+            <page>
+                <rewrite>
+                    <html_breadcrumbs>Learn_AdvancedBreadcrumbs_Block_Html_Breadcrumbs</html_breadcrumbs>
+                </rewrite>
+            </page>
+                
+            <advancedbreadcrumbs>
+                <class>Learn_AdvancedBreadcrumbs_Block</class>
+            </advancedbreadcrumbs>
+        </blocks>
+        
+        <helpers>
+            <advancedbreadcrumbs>
+                <class>Learn_AdvancedBreadcrumbs_Helper</class>
+            </advancedbreadcrumbs>
+        </helpers>
+    </global>
+	
+	<default>
+		<advancedbreadcrumbs_tab>
+			<advancedbreadcrumbs_setting>
+				<!-- <advancedbreadcrumbs_enable>0</advancedbreadcrumbs_enable> -->
+				<advancedbreadcrumbs_single_enable>0</advancedbreadcrumbs_single_enable>
+				<advancedbreadcrumbs_multiple_enable>0</advancedbreadcrumbs_multiple_enable>
+				<advancedbreadcrumbs_search_enable>0</advancedbreadcrumbs_search_enable>
+				<advancedbreadcrumbs_customer_enable>0</advancedbreadcrumbs_customer_enable>
+				<advancedbreadcrumbs_contactus_enable>0</advancedbreadcrumbs_contactus_enable>
+			</advancedbreadcrumbs_setting>
+		</advancedbreadcrumbs_tab>
+	</default>
+</config>
